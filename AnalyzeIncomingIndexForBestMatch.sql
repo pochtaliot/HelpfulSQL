@@ -1,8 +1,8 @@
 -- ========== INPUT ==========
 DECLARE @SchemaName NVARCHAR(128)            = 'dbo';
-DECLARE @TableName  NVARCHAR(128)            = 'table'; 
-DECLARE @KeyColumns NVARCHAR(MAX)            = 'col1, col2';
-DECLARE @IncludedColumns NVARCHAR(MAX)       = 'col3, col4';
+DECLARE @TableName  NVARCHAR(128)            = 'table'; -- target table
+DECLARE @KeyColumns NVARCHAR(MAX)            = 'col1, col2'; -- columns in your new index you want to check before creating
+DECLARE @IncludedColumns NVARCHAR(MAX)       = 'col3, col4'; -- included columns in your new index you want to check before creating
 DECLARE @FullMatchText NVARCHAR(10)          = N'✅ Full Match';
 DECLARE @AddIncludedColumnsText NVARCHAR(50) = N'🛠️ Add Included Columns';
 DECLARE @PartialKeyMatchText NVARCHAR(50)    = N'🛠️ Partial Key Match';
